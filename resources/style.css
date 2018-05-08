@@ -7,19 +7,15 @@ div {
   display: block;
 }
 .container {
-  display: flex;
-  width: 960px;
+  max-width: 960px;
   margin: auto;
-  justify-content: center;
 }
-.banner {
+header {
   height: 31rem;
   background-image: url("images/glasses-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative;
-  top: 0;
 }
 h1 {
   font-family: Helvetica;
@@ -32,38 +28,40 @@ h1 {
   background-color: white;
   margin-top: 10rem;
 }
-.container .navigation {
-  display: flex;
-  align-items: center;
+nav {
   background-color: cadetblue;
-  position: absolute;
   top: 1rem;
   padding: 1rem 0;
-  z-index: 1;
-  width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.navigation img {
+nav div {
+  display: flex;
+  align-items: center;
+}
+nav img {
   height: 1.5rem;
   padding-left: 2rem;
   padding-right: 1rem;
 }
-.navigation span {
+.flex-menu {
+  display: none;
+}
+.nav span {
+  padding-right: 2rem;
   font-family: Helvetica;
   font-size: 1rem;
   color: white;
 }
-.flex span {
-  display: none;
-}
-nav span {
-  padding-right: 2rem;
-}
-.navigation .brand {
-  text-align: left;
+.logo {
+  color: white;
+  font-family: Helvetica;
 }
 .title {
   display: flex;
-  position: absolute;
+  justify-content: flex-end;
+  margin-right: -2rem;
 }
 .description {
   display: flex;
@@ -106,6 +104,7 @@ nav span {
 }
 .text {
   line-height: 1.4;
+  display: block;
 }
  .tab {
    display: flex;
@@ -130,12 +129,10 @@ footer .container {
   height: 1.5rem;
   padding-left: 4rem;
   padding-right: 1rem;
-
 }
 .copyright {
   padding: 4rem 0;
 }
-
 @media only screen and (max-width: 1024px) {
   .banner {
     height: 22rem;
